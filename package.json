@@ -1,0 +1,56 @@
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "{src,lib,test,tests,__tests__,bin}/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "scripts": {
+    "format": "prettier-standard \"{src,lib,test,tests,__tests__,bin}/**/*.js\"",
+    "test": "ava --verbose"
+  },
+  "name": "strict-npm-engines",
+  "version": "0.0.0",
+  "description": "Enforce the NPM and Node versions specified in the package.json 'engines' property.",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinDFuller/strict-npm-engines.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "strict",
+    "engine",
+    "engines",
+    "package",
+    "package.json"
+  ],
+  "author": "Justin Fuller <justindanielfuller@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JustinDFuller/strict-npm-engines/issues"
+  },
+  "homepage": "https://github.com/JustinDFuller/strict-npm-engines#readme",
+  "dependencies": {
+    "read-pkg": "^5.1.1",
+    "semver": "^6.1.1"
+  },
+  "devDependencies": {
+    "ava": "^2.1.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.0",
+    "prettier-standard": "^9.1.1"
+  },
+  "engines": {
+    "npm": ">=6.9",
+    "node": ">=12"
+  }
+}
