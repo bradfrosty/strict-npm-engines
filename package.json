@@ -40,6 +40,7 @@
   },
   "homepage": "https://github.com/JustinDFuller/strict-npm-engines#readme",
   "dependencies": {
+    "chalk": "^2.4.2",
     "read-pkg": "^5.1.1",
     "semver": "^6.1.1"
   },
