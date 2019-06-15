@@ -17,7 +17,7 @@
     "test": "ava --verbose"
   },
   "name": "strict-npm-engines",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Enforce the NPM and Node versions specified in the package.json 'engines' property.",
   "main": "lib/index.js",
   "repository": {
@@ -53,5 +53,6 @@
   "engines": {
     "npm": ">=6.9",
     "node": ">=12"
-  }
+  },
+  "bin": "./bin/strict-npm-engines.js"
 }
