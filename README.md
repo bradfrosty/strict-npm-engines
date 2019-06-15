@@ -42,10 +42,11 @@ You can read more about engines [in the npm documentation](https://docs.npmjs.co
 }
 ```
 
-If an incorrect npm or node version is used, an error message will be printed. Like this:
+If an incorrect npm or node version is used, an error message will be printed, and the process will exit with an error. Like this:
 
 ```
 Invalid node version. Expected >=12 but got 8.16.0.
 ```
 
+If the engines satisfy the range, the process will exit without an error.
 

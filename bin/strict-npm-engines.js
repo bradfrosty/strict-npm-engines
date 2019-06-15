@@ -3,11 +3,17 @@
 const chalk = require('chalk')
 const { strictNpmEngines } = require('../')
 
-strictNpmEngines()
-  .then(function handleSuccess () {
+/**
+ * @returns {undefined} prints an error and exits if the wrong engine is used.
+ */
+async function main () {
+  try {
+    await strictNpmEngines()
     process.exit(0)
-  })
-  .catch(function handleError (error) {
+  } catch (error) {
     process.stderr.write(chalk.white.bgRed.bold(error.message) + '\n')
     process.exit(1)
-  })
+  }
+}
+
+main()
