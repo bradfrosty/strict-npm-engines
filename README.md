@@ -1,4 +1,7 @@
 # strict-npm-engines
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/JustinDFuller/strict-npm-engines.svg)](https://greenkeeper.io/)
+
 Enforce the NPM and Node versions specified in the package.json "engines" property.
 
 ## Install
